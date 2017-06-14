@@ -1,6 +1,6 @@
 {
   "name": "postcss-get-sass-variables",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "PostCSS plugin to get an object containing SASS variables and their values",
   "main": "index.js",
   "scripts": {
