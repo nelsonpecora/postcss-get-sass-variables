@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint --max-warnings 0 index.js",
     "test-with-coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
-    "test": "npm run lint && npm run test-with-coverage"
+    "test": "npm run lint && npm run test-with-coverage",
+    "coveralls": "npm run test-with-coverage -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
