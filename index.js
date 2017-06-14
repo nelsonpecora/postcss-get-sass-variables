@@ -11,7 +11,7 @@ function getVariableName(str) {
   return match && match[1];
 }
 
-module.exports = postcss.plugin('inline-variables', (callback) => {
+module.exports = postcss.plugin('get-sass-variables', (callback) => {
   const variables = {};
 
   return (root) => {
