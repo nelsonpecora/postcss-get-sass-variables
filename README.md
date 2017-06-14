@@ -13,8 +13,9 @@ npm install --save-dev postcss-get-sass-variables
 Write SASS-style variables in a css file:
 
 ```sass
-$background-color: red;
+$color: red;
 $font-stack: Helvetica, Arial, sans-serif;
+$other-color: $color; /* variables can reference other variables */
 ```
 Then run it through `postcss`, providing a callback function to handle the resulting object:
 
@@ -22,7 +23,7 @@ Then run it through `postcss`, providing a callback function to handle the resul
 const getVariables = require('postcss-get-sass-variables');
 
 postcss([getVariables((obj) => {
-  console.log(obj); // → { 'background-color': 'red', 'font-stack': 'Helvetica, Arial, sans-serif' }
+  console.log(obj); // → { color: 'red', 'font-stack': 'Helvetica, Arial, sans-serif', 'other-color': 'red' }
 })]).process(css);
 ```
 
