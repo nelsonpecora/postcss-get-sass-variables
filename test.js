@@ -36,7 +36,7 @@ describe('get-sass-variables', () => {
 
     return postcss([lib(_.noop)]).process(input, { from: '/foo/bar.css', to: '/foo/bar.css' })
       .catch((e) => {
-        expect(e.message).to.equal('inline-variables: /foo/bar.css:1:1: $foo references $bar which doesn\'t exist!');
+        expect(e.message).to.equal('get-sass-variables: /foo/bar.css:1:1: $foo references $bar which doesn\'t exist!');
       });
   });
 
